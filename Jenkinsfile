@@ -1,19 +1,14 @@
 pipeline {
 	 agent any
 	 stages {
-		stage("buildOther") {
+		 stage("buildDocker") {
 			 steps {
-				 	bat 'gradle clean build'
-			 }
-		}
-		 stage("testOther") {
-			 steps {
-				 	bat 'gradle clean executeFeature -D environmentName="QA" -DcucumberTags="@regression"'
+				 bat 'docker build -t automationJenkins:1.0.0 .'
 			 }
 		 }
-		 stage("deployOther") {
+		 stage("runDocker") {
 			 steps {
-				 bat 'echo new deply'
+				 bat 'docker run automationJenkins:1.0.0'
 			 }
 		 }
 	 }
