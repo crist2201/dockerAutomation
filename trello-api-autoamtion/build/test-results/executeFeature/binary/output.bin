@@ -1,0 +1,61 @@
+
+;@regression @acceptance @boards @createBoard @deleteBoard
+ëScenario: Gets board                                              [90m# trello-api-autoamtion/src/test/resources/features/boards.feature:8[0m
+T      [31mcom.jayway.jsonpath.PathNotFoundException: No results for path: $['id']
+TCaused by: com.jayway.jsonpath.PathNotFoundException: No results for path: $['id']
+[0m
+∂  [36mGiven [0m[36mI have a valid key and token[0m                              [90m# com.qaacademy.module4.automation.trello.api.steps.BoardsSteps.haveAValidKeyAndToken()[0m
+›  [36mWhen [0m[36mI send a request to GET a board endpoint [0m[36m[1m"boards/{id}"[0m     [90m# com.qaacademy.module4.automation.trello.api.steps.BoardsSteps.sendARequestToGETABoardEndpoint(java.lang.String)[0m
+Œ  [36mThen [0m[36mthe response status code should be [0m[36m[1m200[0m                     [90m# com.qaacademy.module4.automation.trello.api.steps.BoardsSteps.theResponseStatusCodeShouldBe(int)[0m
+â  [36mAnd [0m[36mthe response should have a field [0m[36m[1m"name"[0m[36m with value [0m[36m[1m"{name}"[0m [90m# com.qaacademy.module4.automation.trello.api.steps.BoardsSteps.theResponseShouldHaveAFieldWithValue(java.lang.String,java.lang.String)[0m
+c      [31mjava.lang.NullPointerException: Cannot invoke "String.isEmpty()" because "str" is null
+9	at java.base/java.lang.String.concat(String.java:2769)
+b	at com.qaacademy.module4.automation.trello.api.hooks.BoardsHook.deleteBoard(BoardsHook.java:55)
+[0m
+
+.@regression @acceptance @boards @deleteBoard
+´Scenario: Creates board                                                                    [90m# trello-api-autoamtion/src/test/resources/features/boards.feature:14[0m
+œ  [32mGiven [0m[32mI have a valid key and token[0m                                                       [90m# com.qaacademy.module4.automation.trello.api.steps.BoardsSteps.haveAValidKeyAndToken()[0m
+¶  [31mWhen [0m[31mI send a request to POST boards endpoint [0m[31m[1m"boards"[0m[31m with name [0m[31m[1m"example-test2023-post"[0m [90m# com.qaacademy.module4.automation.trello.api.steps.BoardsSteps.sendARequestToPOSTBoardsEndpointWithName(java.lang.String,java.lang.String)[0m
+T      [31mcom.jayway.jsonpath.PathNotFoundException: No results for path: $['id']
+TCaused by: com.jayway.jsonpath.PathNotFoundException: No results for path: $['id']
+[0m
+Á  [36mThen [0m[36mthe response status code should be [0m[36m[1m200[0m                                              [90m# com.qaacademy.module4.automation.trello.api.steps.BoardsSteps.theResponseStatusCodeShouldBe(int)[0m
+ˇ  [36mAnd [0m[36mthe response should be contain [0m[36m[1m"comments"[0m[36m field[0m                                      [90m# com.qaacademy.module4.automation.trello.api.steps.BoardsSteps.theResponseShouldBeContainField(java.lang.String)[0m
+¢  [36mAnd [0m[36mthe response should have a field [0m[36m[1m"name"[0m[36m with value [0m[36m[1m"{name}"[0m                          [90m# com.qaacademy.module4.automation.trello.api.steps.BoardsSteps.theResponseShouldHaveAFieldWithValue(java.lang.String,java.lang.String)[0m
+c      [31mjava.lang.NullPointerException: Cannot invoke "String.isEmpty()" because "str" is null
+9	at java.base/java.lang.String.concat(String.java:2769)
+b	at com.qaacademy.module4.automation.trello.api.hooks.BoardsHook.deleteBoard(BoardsHook.java:55)
+[0m
+
+;@regression @acceptance @boards @createBoard @deleteBoard
+ÆScenario: Updates board                                                                       [90m# trello-api-autoamtion/src/test/resources/features/boards.feature:21[0m
+T      [31mcom.jayway.jsonpath.PathNotFoundException: No results for path: $['id']
+TCaused by: com.jayway.jsonpath.PathNotFoundException: No results for path: $['id']
+[0m
+“  [36mGiven [0m[36mI have a valid key and token[0m                                                          [90m# com.qaacademy.module4.automation.trello.api.steps.BoardsSteps.haveAValidKeyAndToken()[0m
+®  [36mWhen [0m[36mI send a request to PUT boards endpoint [0m[36m[1m"boards/{id}"[0m[36m with name [0m[36m[1m"example-test2023-put"[0m [90m# com.qaacademy.module4.automation.trello.api.steps.BoardsSteps.sendARequestToPUTBoardsEndpointWithName(java.lang.String,java.lang.String)[0m
+Í  [36mThen [0m[36mthe response status code should be [0m[36m[1m200[0m                                                 [90m# com.qaacademy.module4.automation.trello.api.steps.BoardsSteps.theResponseStatusCodeShouldBe(int)[0m
+Ç  [36mAnd [0m[36mthe response should be contain [0m[36m[1m"prefs"[0m[36m field[0m                                            [90m# com.qaacademy.module4.automation.trello.api.steps.BoardsSteps.theResponseShouldBeContainField(java.lang.String)[0m
+•  [36mAnd [0m[36mthe response should have a field [0m[36m[1m"name"[0m[36m with value [0m[36m[1m"{name}"[0m                             [90m# com.qaacademy.module4.automation.trello.api.steps.BoardsSteps.theResponseShouldHaveAFieldWithValue(java.lang.String,java.lang.String)[0m
+c      [31mjava.lang.NullPointerException: Cannot invoke "String.isEmpty()" because "str" is null
+9	at java.base/java.lang.String.concat(String.java:2769)
+b	at com.qaacademy.module4.automation.trello.api.hooks.BoardsHook.deleteBoard(BoardsHook.java:55)
+[0m
+
+.@regression @acceptance @boards @createBoard
+êScenario: Deletes board                                         [90m# trello-api-autoamtion/src/test/resources/features/boards.feature:28[0m
+T      [31mcom.jayway.jsonpath.PathNotFoundException: No results for path: $['id']
+TCaused by: com.jayway.jsonpath.PathNotFoundException: No results for path: $['id']
+[0m
+¥  [36mGiven [0m[36mI have a valid key and token[0m                            [90m# com.qaacademy.module4.automation.trello.api.steps.BoardsSteps.haveAValidKeyAndToken()[0m
+ﬁ  [36mWhen [0m[36mI send a request to DELETE boards endpoint [0m[36m[1m"boards/{id}"[0m [90m# com.qaacademy.module4.automation.trello.api.steps.BoardsSteps.sendARequestToDELETEBoardsEndpoint(java.lang.String)[0m
+Ã  [36mThen [0m[36mthe response status code should be [0m[36m[1m200[0m                   [90m# com.qaacademy.module4.automation.trello.api.steps.BoardsSteps.theResponseStatusCodeShouldBe(int)[0m
+‰  [36mThen [0m[36mthe response should be contain [0m[36m[1m"{\"_value\":null}"[0m[36m field[0m [90m# com.qaacademy.module4.automation.trello.api.steps.BoardsSteps.theResponseShouldBeContainField(java.lang.String)[0m
+
+@regression @smoke @boardsAll
+ïScenario: Gets boards                                              [90m# trello-api-autoamtion/src/test/resources/features/boardsAll.feature:4[0m
+∑  [32mGiven [0m[32mI have a valid key and token[0m                               [90m# com.qaacademy.module4.automation.trello.api.steps.BoardsSteps.haveAValidKeyAndToken()[0m
+ﬂ  [32mWhen [0m[32mI send a request to GET boards endpoint [0m[32m[1m"members/me/boards"[0m [90m# com.qaacademy.module4.automation.trello.api.steps.BoardsSteps.iSendARequestToGETBoardsEndpoint(java.lang.String)[0m
+œ  [32mThen [0m[32mthe response status code should be [0m[32m[1m200[0m                      [90m# com.qaacademy.module4.automation.trello.api.steps.BoardsSteps.theResponseStatusCodeShouldBe(int)[0m
+Á  [32mAnd [0m[32mthe response should be contain [0m[32m[1m"boards"[0m[32m field[0m                [90m# com.qaacademy.module4.automation.trello.api.steps.BoardsSteps.theResponseShouldBeContainField(java.lang.String)[0m
